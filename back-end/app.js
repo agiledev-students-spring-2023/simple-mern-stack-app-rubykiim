@@ -78,5 +78,16 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about-us', async (req, res) => {
+  try {
+    res.json({
+      text: 'My name is Ruby, a senior majoring in Computer Science with double minor in Interactive Media and Arts & Chinese Language. I like to hop around cafes and also enjoy scuba diving & walking.',
+      img: 'https://raw.githubusercontent.com/agiledev-students-spring-2023/simple-mern-stack-app-rubykiim/ad4254320b5ad9533c5fd18cab79b8da9515c48a/back-end/my-img.jpg',
+    })
+  } catch (err) {
+    console.error(err)
+  }
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
